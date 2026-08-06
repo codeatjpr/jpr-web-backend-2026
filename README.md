@@ -16,7 +16,11 @@ npm run dev
 API: `http://localhost:4000`  
 Health: `GET /api/v1/health`
 
-On first boot, a super admin is seeded from `SEED_ADMIN_*` env vars, plus default legal pages, settings, and email templates.
+Seed manually once (super admin, legal pages, settings, email templates):
+
+```bash
+npm run seed
+```
 
 ## Security checklist
 

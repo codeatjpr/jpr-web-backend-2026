@@ -172,12 +172,6 @@ export async function ensureSeedData(): Promise<void> {
       autoReplyEnabled: true,
       notificationsEnabled: true,
     })
-  } else if (!settings.socialLinks || settings.socialLinks.length < defaultSocialLinks.length) {
-    await SiteSettings.updateOne(
-      { key: 'default' },
-      { $set: { socialLinks: defaultSocialLinks } },
-    )
-    logger.info('Updated site settings social links to full default set')
   }
 
   const adminTpl = await EmailTemplate.findOne({ key: 'lead_admin' })
