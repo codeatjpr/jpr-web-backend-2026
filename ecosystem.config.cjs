@@ -1,9 +1,10 @@
 /**
  * PM2 process file for jpr-backend.
+ * Must be .cjs because package.json has "type": "module".
  *
  * Usage (from jpr-backend/):
  *   npm run build
- *   pm2 start ecosystem.config.js --env production
+ *   pm2 start ecosystem.config.cjs --env production
  *   pm2 save
  *   pm2 startup
  */
